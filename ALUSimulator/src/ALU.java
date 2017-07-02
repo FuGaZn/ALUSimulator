@@ -1,22 +1,22 @@
 import java.math.BigInteger;
 
 /**
- * Ä£ÄâALU½øĞĞÕûÊıºÍ¸¡µãÊıµÄËÄÔòÔËËã
+ * æ¨¡æ‹ŸALUè¿›è¡Œæ•´æ•°å’Œæµ®ç‚¹æ•°çš„å››åˆ™è¿ç®—
  * 
- * @author [161250025£¬·ü¼ÒĞË] .
+ * @author [NJU SE JC]
  */
 
 public class ALU {
 
 	/**
-	 * Éú³ÉÊ®½øÖÆÕûÊıµÄ¶ş½øÖÆ²¹Âë±íÊ¾¡£<br/>
-	 * Àı£ºintegerRepresentation("9", 8)
+	 * ç”Ÿæˆåè¿›åˆ¶æ•´æ•°çš„äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºã€‚<br/>
+	 * ä¾‹ï¼šintegerRepresentation("9", 8)
 	 * 
 	 * @param number
-	 *            Ê®½øÖÆÕûÊı¡£ÈôÎª¸ºÊı£»ÔòµÚÒ»Î»Îª¡°-¡±£»ÈôÎªÕıÊı»ò 0£¬ÔòÎŞ·ûºÅÎ»
+	 *            åè¿›åˆ¶æ•´æ•°ã€‚è‹¥ä¸ºè´Ÿæ•°ï¼›åˆ™ç¬¬ä¸€ä½ä¸ºâ€œ-â€ï¼›è‹¥ä¸ºæ­£æ•°æˆ– 0ï¼Œåˆ™æ— ç¬¦å·ä½
 	 * @param length
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ³¤¶È
-	 * @return numberµÄ¶ş½øÖÆ²¹Âë±íÊ¾£¬³¤¶ÈÎªlength
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„é•¿åº¦
+	 * @return numberçš„äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºï¼Œé•¿åº¦ä¸ºlength
 	 */
 	public String integerRepresentation(String number, int length) {
 
@@ -30,17 +30,17 @@ public class ALU {
 	}
 
 	/**
-	 * Éú³ÉÊ®½øÖÆ¸¡µãÊıµÄ¶ş½øÖÆ±íÊ¾¡£ ĞèÒª¿¼ÂÇ 0¡¢·´¹æ¸ñ»¯¡¢Õı¸ºÎŞÇî£¨¡°+Inf¡±ºÍ¡°-Inf¡±£©¡¢ NaNµÈÒòËØ£¬¾ßÌå½è¼ø IEEE 754¡£
-	 * ÉáÈë²ßÂÔÎªÏò0ÉáÈë¡£<br/>
-	 * Àı£ºfloatRepresentation("11.375", 8, 11)
+	 * ç”Ÿæˆåè¿›åˆ¶æµ®ç‚¹æ•°çš„äºŒè¿›åˆ¶è¡¨ç¤ºã€‚ éœ€è¦è€ƒè™‘ 0ã€åè§„æ ¼åŒ–ã€æ­£è´Ÿæ— ç©·ï¼ˆâ€œ+Infâ€å’Œâ€œ-Infâ€ï¼‰ã€ NaNç­‰å› ç´ ï¼Œå…·ä½“å€Ÿé‰´ IEEE 754ã€‚
+	 * èˆå…¥ç­–ç•¥ä¸ºå‘0èˆå…¥ã€‚<br/>
+	 * ä¾‹ï¼šfloatRepresentation("11.375", 8, 11)
 	 * 
 	 * @param number
-	 *            Ê®½øÖÆ¸¡µãÊı£¬°üº¬Ğ¡Êıµã¡£ÈôÎª¸ºÊı£»ÔòµÚÒ»Î»Îª¡°-¡±£»ÈôÎªÕıÊı»ò 0£¬ÔòÎŞ·ûºÅÎ»
+	 *            åè¿›åˆ¶æµ®ç‚¹æ•°ï¼ŒåŒ…å«å°æ•°ç‚¹ã€‚è‹¥ä¸ºè´Ÿæ•°ï¼›åˆ™ç¬¬ä¸€ä½ä¸ºâ€œ-â€ï¼›è‹¥ä¸ºæ­£æ•°æˆ– 0ï¼Œåˆ™æ— ç¬¦å·ä½
 	 * @param eLength
-	 *            Ö¸ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            æŒ‡æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param sLength
-	 *            Î²ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
-	 * @return numberµÄ¶ş½øÖÆ±íÊ¾£¬³¤¶ÈÎª 1+eLength+sLength¡£´Ó×óÏòÓÒ£¬ÒÀ´ÎÎª·ûºÅ¡¢Ö¸Êı£¨ÒÆÂë±íÊ¾£©¡¢Î²Êı£¨Ê×Î»Òş²Ø£©
+	 *            å°¾æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
+	 * @return numberçš„äºŒè¿›åˆ¶è¡¨ç¤ºï¼Œé•¿åº¦ä¸º 1+eLength+sLengthã€‚ä»å·¦å‘å³ï¼Œä¾æ¬¡ä¸ºç¬¦å·ã€æŒ‡æ•°ï¼ˆç§»ç è¡¨ç¤ºï¼‰ã€å°¾æ•°ï¼ˆé¦–ä½éšè—ï¼‰
 	 */
 	public String floatRepresentation(String number, int eLength, int sLength) {
 		String eString = "";
@@ -48,7 +48,7 @@ public class ALU {
 		String result = "";
 		int signBit = 0;
 
-		// ·ûºÅÎ»
+		// ç¬¦å·ä½
 		if (number.charAt(0) == '-') {
 			signBit = 1;
 		}
@@ -72,7 +72,7 @@ public class ALU {
 			if (number.substring(0, 1).equals("-")) {
 				number = number.substring(1);
 			}
-			int index = -1;// .µÄË÷Òı
+			int index = -1;// .çš„ç´¢å¼•
 
 			for (int i = 0; i < number.length(); i++) {
 				if (number.substring(i, i + 1).equals(".")) {
@@ -83,12 +83,12 @@ public class ALU {
 			String str = number;
 			if (index > 0) {
 				str = number.substring(0, index);
-			} else if (index == 0) {// Èç¹û.ÊÇµÚÒ»Î»
+			} else if (index == 0) {// å¦‚æœ.æ˜¯ç¬¬ä¸€ä½
 				str = "0";
 			}
 
 			int num = Integer.parseInt(str);
-			String eStr = ""; // ÕûÊı²¿·ÖµÄ¶ş½øÖÆ
+			String eStr = ""; // æ•´æ•°éƒ¨åˆ†çš„äºŒè¿›åˆ¶
 			int eNum = 0;
 			int eNum2 = 0;
 			eString = "";
@@ -98,25 +98,25 @@ public class ALU {
 					num = num / 2;
 				} while (num != 0);
 
-				eNum = receivePowerOf2(eLength - 1) + eStr.length() - 2; // ½×ÂëÖµ
+				eNum = receivePowerOf2(eLength - 1) + eStr.length() - 2; // é˜¶ç å€¼
 				eNum2 = eNum;
 				do {
 					eString = eNum % 2 + eString;
 					eNum = eNum / 2;
 				} while (eNum != 0);
-				if (eString.length() < eLength) { // Çó³ö½×Âë
+				if (eString.length() < eLength) { // æ±‚å‡ºé˜¶ç 
 					for (int i = 0; i < eLength - eString.length() + 1; i++) {
 						eString = "0" + eString;
 					}
 				}
 			}
-			// ÇóÎ²Êı
+			// æ±‚å°¾æ•°
 			if (index > 0) {
 
 				String str2 = "0." + number.substring(index + 1, number.length());
 				int eNum3 = 0;
 				double num2 = Double.parseDouble(str2);
-				// ÇóĞ¡Êı
+				// æ±‚å°æ•°
 
 				do {
 					num2 = num2 * 2;
@@ -143,7 +143,7 @@ public class ALU {
 					} while (eNum != 0);
 
 					if (eString.length() < eLength) {
-						while (eString.length() < eLength) { // Çó³ö½×Âë
+						while (eString.length() < eLength) { // æ±‚å‡ºé˜¶ç 
 							eString = "0" + eString;
 						}
 					} else {
@@ -177,7 +177,7 @@ public class ALU {
 					} while (eNum3 != 0);
 
 					if (eString.length() < eLength) {
-						while (eString.length() < eLength) { // Çó³ö½×Âë
+						while (eString.length() < eLength) { // æ±‚å‡ºé˜¶ç 
 							eString = "0" + eString;
 						}
 					} else {
@@ -202,15 +202,15 @@ public class ALU {
 	}
 
 	/**
-	 * Éú³ÉÊ®½øÖÆ¸¡µãÊıµÄIEEE 754±íÊ¾£¬ÒªÇóµ÷ÓÃ{@link #floatRepresentation(String, int, int)
-	 * floatRepresentation}ÊµÏÖ¡£<br/>
-	 * Àı£ºieee754("11.375", 32)
+	 * ç”Ÿæˆåè¿›åˆ¶æµ®ç‚¹æ•°çš„IEEE 754è¡¨ç¤ºï¼Œè¦æ±‚è°ƒç”¨{@link #floatRepresentation(String, int, int)
+	 * floatRepresentation}å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šieee754("11.375", 32)
 	 * 
 	 * @param number
-	 *            Ê®½øÖÆ¸¡µãÊı£¬°üº¬Ğ¡Êıµã¡£ÈôÎª¸ºÊı£»ÔòµÚÒ»Î»Îª¡°-¡±£»ÈôÎªÕıÊı»ò 0£¬ÔòÎŞ·ûºÅÎ»
+	 *            åè¿›åˆ¶æµ®ç‚¹æ•°ï¼ŒåŒ…å«å°æ•°ç‚¹ã€‚è‹¥ä¸ºè´Ÿæ•°ï¼›åˆ™ç¬¬ä¸€ä½ä¸ºâ€œ-â€ï¼›è‹¥ä¸ºæ­£æ•°æˆ– 0ï¼Œåˆ™æ— ç¬¦å·ä½
 	 * @param length
-	 *            ¶ş½øÖÆ±íÊ¾µÄ³¤¶È£¬Îª32»ò64
-	 * @return numberµÄIEEE 754±íÊ¾£¬³¤¶ÈÎªlength¡£´Ó×óÏòÓÒ£¬ÒÀ´ÎÎª·ûºÅ¡¢Ö¸Êı£¨ÒÆÂë±íÊ¾£©¡¢Î²Êı£¨Ê×Î»Òş²Ø£©
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„é•¿åº¦ï¼Œä¸º32æˆ–64
+	 * @return numberçš„IEEE 754è¡¨ç¤ºï¼Œé•¿åº¦ä¸ºlengthã€‚ä»å·¦å‘å³ï¼Œä¾æ¬¡ä¸ºç¬¦å·ã€æŒ‡æ•°ï¼ˆç§»ç è¡¨ç¤ºï¼‰ã€å°¾æ•°ï¼ˆé¦–ä½éšè—ï¼‰
 	 */
 	public String ieee754(String number, int length) {
 		String str = "";
@@ -223,12 +223,12 @@ public class ALU {
 	}
 
 	/**
-	 * ¼ÆËã¶ş½øÖÆ²¹Âë±íÊ¾µÄÕûÊıµÄÕæÖµ¡£<br/>
-	 * Àı£ºintegerTrueValue("00001001")
+	 * è®¡ç®—äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„æ•´æ•°çš„çœŸå€¼ã€‚<br/>
+	 * ä¾‹ï¼šintegerTrueValue("00001001")
 	 * 
 	 * @param operand
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ²Ù×÷Êı
-	 * @return operandµÄÕæÖµ¡£ÈôÎª¸ºÊı£»ÔòµÚÒ»Î»Îª¡°-¡±£»ÈôÎªÕıÊı»ò 0£¬ÔòÎŞ·ûºÅÎ»
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„æ“ä½œæ•°
+	 * @return operandçš„çœŸå€¼ã€‚è‹¥ä¸ºè´Ÿæ•°ï¼›åˆ™ç¬¬ä¸€ä½ä¸ºâ€œ-â€ï¼›è‹¥ä¸ºæ­£æ•°æˆ– 0ï¼Œåˆ™æ— ç¬¦å·ä½
 	 */
 	public String integerTrueValue(String operand) {
 		int result = 0;
@@ -265,7 +265,7 @@ public class ALU {
 	}
 
 	/**
-	 * Çó2µÄn´Î·½(n>=0)
+	 * æ±‚2çš„næ¬¡æ–¹(n>=0)
 	 * 
 	 * @param n
 	 * @return
@@ -283,7 +283,7 @@ public class ALU {
 	}
 
 	/**
-	 * Çó2µÄn´Î·½(n<0)
+	 * æ±‚2çš„næ¬¡æ–¹(n<0)
 	 * 
 	 * @param n
 	 * @return
@@ -298,7 +298,7 @@ public class ALU {
 	}
 
 	/**
-	 * ÇóĞ¡ÊıµÄÕæÖµ
+	 * æ±‚å°æ•°çš„çœŸå€¼
 	 * 
 	 * @param operand
 	 * @return
@@ -313,17 +313,17 @@ public class ALU {
 	}
 
 	/**
-	 * ¼ÆËã¶ş½øÖÆÔ­Âë±íÊ¾µÄ¸¡µãÊıµÄÕæÖµ¡£<br/>
-	 * Àı£ºfloatTrueValue("01000001001101100000", 8, 11)
+	 * è®¡ç®—äºŒè¿›åˆ¶åŸç è¡¨ç¤ºçš„æµ®ç‚¹æ•°çš„çœŸå€¼ã€‚<br/>
+	 * ä¾‹ï¼šfloatTrueValue("01000001001101100000", 8, 11)
 	 * 
 	 * @param operand
-	 *            ¶ş½øÖÆ±íÊ¾µÄ²Ù×÷Êı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„æ“ä½œæ•°
 	 * @param eLength
-	 *            Ö¸ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            æŒ‡æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param sLength
-	 *            Î²ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
-	 * @return operandµÄÕæÖµ¡£ÈôÎª¸ºÊı£»ÔòµÚÒ»Î»Îª¡°-¡±£»ÈôÎªÕıÊı»ò 0£¬ÔòÎŞ·ûºÅÎ»¡£Õı¸ºÎŞÇî·Ö±ğ±íÊ¾Îª¡°+Inf¡±ºÍ¡°-Inf¡±£¬
-	 *         NaN±íÊ¾Îª¡°NaN¡±
+	 *            å°¾æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
+	 * @return operandçš„çœŸå€¼ã€‚è‹¥ä¸ºè´Ÿæ•°ï¼›åˆ™ç¬¬ä¸€ä½ä¸ºâ€œ-â€ï¼›è‹¥ä¸ºæ­£æ•°æˆ– 0ï¼Œåˆ™æ— ç¬¦å·ä½ã€‚æ­£è´Ÿæ— ç©·åˆ†åˆ«è¡¨ç¤ºä¸ºâ€œ+Infâ€å’Œâ€œ-Infâ€ï¼Œ
+	 *         NaNè¡¨ç¤ºä¸ºâ€œNaNâ€
 	 */
 
 	public String floatTrueValue(String operand, int eLength, int sLength) {
@@ -335,7 +335,7 @@ public class ALU {
 			result = "-";
 		}
 
-		// Õı¸ºÎŞÇî¡¢·ÇÊı¡¢0
+		// æ­£è´Ÿæ— ç©·ã€éæ•°ã€0
 		String eInf = "";
 		for (int i = 0; i < eLength; i++) {
 			eInf = eInf + "1";
@@ -363,12 +363,12 @@ public class ALU {
 		} else if (eString.equals(eInf) && !sString.equals(sInf1)) {
 			result = "NaN";
 		} else {
-			// Ö¸Êı
+			// æŒ‡æ•°
 			int eValue = Integer.parseInt(integerTrueValue("0" + eString)) - receivePowerOf2(eLength - 1) + 1;
 			String Znum = "";
-			String Xnum = "";// Ğ¡Êı²¿·Ö
-			int sZvalue = 0;// ÕûÊıÖµ
-			double sXvalue = 0; // Ğ¡ÊıÖµ
+			String Xnum = "";// å°æ•°éƒ¨åˆ†
+			int sZvalue = 0;// æ•´æ•°å€¼
+			double sXvalue = 0; // å°æ•°å€¼
 
 			if (eValue >= 0) {
 				Znum = "1" + sString.substring(0, eValue);
@@ -392,12 +392,12 @@ public class ALU {
 	}
 
 	/**
-	 * °´Î»È¡·´²Ù×÷¡£<br/>
-	 * Àı£ºnegation("00001001")
+	 * æŒ‰ä½å–åæ“ä½œã€‚<br/>
+	 * ä¾‹ï¼šnegation("00001001")
 	 * 
 	 * @param operand
-	 *            ¶ş½øÖÆ±íÊ¾µÄ²Ù×÷Êı
-	 * @return operand°´Î»È¡·´µÄ½á¹û
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„æ“ä½œæ•°
+	 * @return operandæŒ‰ä½å–åçš„ç»“æœ
 	 */
 	public String negation(String operand) {
 		String[] str = operand.split("");
@@ -417,14 +417,14 @@ public class ALU {
 	}
 
 	/**
-	 * ×óÒÆ²Ù×÷¡£<br/>
-	 * Àı£ºleftShift("00001001", 2)
+	 * å·¦ç§»æ“ä½œã€‚<br/>
+	 * ä¾‹ï¼šleftShift("00001001", 2)
 	 * 
 	 * @param operand
-	 *            ¶ş½øÖÆ±íÊ¾µÄ²Ù×÷Êı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„æ“ä½œæ•°
 	 * @param n
-	 *            ×óÒÆµÄÎ»Êı
-	 * @return operand×óÒÆnÎ»µÄ½á¹û
+	 *            å·¦ç§»çš„ä½æ•°
+	 * @return operandå·¦ç§»nä½çš„ç»“æœ
 	 */
 	public String leftShift(String operand, int n) {
 		String result = operand;
@@ -437,14 +437,14 @@ public class ALU {
 	}
 
 	/**
-	 * Âß¼­ÓÒÒÆ²Ù×÷¡£<br/>
-	 * Àı£ºlogRightShift("11110110", 2)
+	 * é€»è¾‘å³ç§»æ“ä½œã€‚<br/>
+	 * ä¾‹ï¼šlogRightShift("11110110", 2)
 	 * 
 	 * @param operand
-	 *            ¶ş½øÖÆ±íÊ¾µÄ²Ù×÷Êı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„æ“ä½œæ•°
 	 * @param n
-	 *            ÓÒÒÆµÄÎ»Êı
-	 * @return operandÂß¼­ÓÒÒÆnÎ»µÄ½á¹û
+	 *            å³ç§»çš„ä½æ•°
+	 * @return operandé€»è¾‘å³ç§»nä½çš„ç»“æœ
 	 */
 	public String logRightShift(String operand, int n) {
 		String result = operand;
@@ -458,14 +458,14 @@ public class ALU {
 	}
 
 	/**
-	 * ËãÊõÓÒÒÆ²Ù×÷¡£<br/>
-	 * Àı£ºlogRightShift("11110110", 2)
+	 * ç®—æœ¯å³ç§»æ“ä½œã€‚<br/>
+	 * ä¾‹ï¼šlogRightShift("11110110", 2)
 	 * 
 	 * @param operand
-	 *            ¶ş½øÖÆ±íÊ¾µÄ²Ù×÷Êı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„æ“ä½œæ•°
 	 * @param n
-	 *            ÓÒÒÆµÄÎ»Êı
-	 * @return operandËãÊõÓÒÒÆnÎ»µÄ½á¹û
+	 *            å³ç§»çš„ä½æ•°
+	 * @return operandç®—æœ¯å³ç§»nä½çš„ç»“æœ
 	 */
 	public String ariRightShift(String operand, int n) {
 
@@ -489,16 +489,16 @@ public class ALU {
 	}
 
 	/**
-	 * È«¼ÓÆ÷£¬¶ÔÁ½Î»ÒÔ¼°½øÎ»½øĞĞ¼Ó·¨ÔËËã¡£<br/>
-	 * Àı£ºfullAdder('1', '1', '0')
+	 * å…¨åŠ å™¨ï¼Œå¯¹ä¸¤ä½ä»¥åŠè¿›ä½è¿›è¡ŒåŠ æ³•è¿ç®—ã€‚<br/>
+	 * ä¾‹ï¼šfullAdder('1', '1', '0')
 	 * 
 	 * @param x
-	 *            ±»¼ÓÊıµÄÄ³Ò»Î»£¬È¡0»ò1
+	 *            è¢«åŠ æ•°çš„æŸä¸€ä½ï¼Œå–0æˆ–1
 	 * @param y
-	 *            ¼ÓÊıµÄÄ³Ò»Î»£¬È¡0»ò1
+	 *            åŠ æ•°çš„æŸä¸€ä½ï¼Œå–0æˆ–1
 	 * @param c
-	 *            µÍÎ»¶Ôµ±Ç°Î»µÄ½øÎ»£¬È¡0»ò1
-	 * @return Ïà¼ÓµÄ½á¹û£¬ÓÃ³¤¶ÈÎª2µÄ×Ö·û´®±íÊ¾£¬µÚ1Î»±íÊ¾½øÎ»£¬µÚ2Î»±íÊ¾ºÍ
+	 *            ä½ä½å¯¹å½“å‰ä½çš„è¿›ä½ï¼Œå–0æˆ–1
+	 * @return ç›¸åŠ çš„ç»“æœï¼Œç”¨é•¿åº¦ä¸º2çš„å­—ç¬¦ä¸²è¡¨ç¤ºï¼Œç¬¬1ä½è¡¨ç¤ºè¿›ä½ï¼Œç¬¬2ä½è¡¨ç¤ºå’Œ
 	 */
 	public String fullAdder(char x, char y, char c) {
 		int F = 0;
@@ -512,16 +512,16 @@ public class ALU {
 	}
 
 	/**
-	 * 4Î»ÏÈĞĞ½øÎ»¼Ó·¨Æ÷¡£ÒªÇó²ÉÓÃ{@link #fullAdder(char, char, char) fullAdder}À´ÊµÏÖ<br/>
-	 * Àı£ºclaAdder("1001", "0001", '1')
+	 * 4ä½å…ˆè¡Œè¿›ä½åŠ æ³•å™¨ã€‚è¦æ±‚é‡‡ç”¨{@link #fullAdder(char, char, char) fullAdder}æ¥å®ç°<br/>
+	 * ä¾‹ï¼šclaAdder("1001", "0001", '1')
 	 * 
 	 * @param operand1
-	 *            4Î»¶ş½øÖÆ±íÊ¾µÄ±»¼ÓÊı
+	 *            4ä½äºŒè¿›åˆ¶è¡¨ç¤ºçš„è¢«åŠ æ•°
 	 * @param operand2
-	 *            4Î»¶ş½øÖÆ±íÊ¾µÄ¼ÓÊı
+	 *            4ä½äºŒè¿›åˆ¶è¡¨ç¤ºçš„åŠ æ•°
 	 * @param c
-	 *            µÍÎ»¶Ôµ±Ç°Î»µÄ½øÎ»£¬È¡0»ò1
-	 * @return ³¤¶ÈÎª5µÄ×Ö·û´®±íÊ¾µÄ¼ÆËã½á¹û£¬ÆäÖĞµÚ1Î»ÊÇ×î¸ßÎ»½øÎ»£¬ºó4Î»ÊÇÏà¼Ó½á¹û£¬ÆäÖĞ½øÎ»²»¿ÉÒÔÓÉÑ­»·»ñµÃ
+	 *            ä½ä½å¯¹å½“å‰ä½çš„è¿›ä½ï¼Œå–0æˆ–1
+	 * @return é•¿åº¦ä¸º5çš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„è®¡ç®—ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æ˜¯æœ€é«˜ä½è¿›ä½ï¼Œå4ä½æ˜¯ç›¸åŠ ç»“æœï¼Œå…¶ä¸­è¿›ä½ä¸å¯ä»¥ç”±å¾ªç¯è·å¾—
 	 */
 	public String claAdder(String operand1, String operand2, char c) {
 
@@ -536,16 +536,16 @@ public class ALU {
 	}
 
 	/**
-	 * ¼ÓÒ»Æ÷£¬ÊµÏÖ²Ù×÷Êı¼Ó1µÄÔËËã¡£ ĞèÒª²ÉÓÃÓëÃÅ¡¢»òÃÅ¡¢Òì»òÃÅµÈÄ£Äâ£¬
-	 * ²»¿ÉÒÔÖ±½Óµ÷ÓÃ{@link #fullAdder(char, char, char) fullAdder}¡¢
-	 * {@link #claAdder(String, String, char) claAdder}¡¢
-	 * {@link #adder(String, String, char, int) adder}¡¢
-	 * {@link #integerAddition(String, String, int) integerAddition}·½·¨¡£<br/>
-	 * Àı£ºoneAdder("00001001")
+	 * åŠ ä¸€å™¨ï¼Œå®ç°æ“ä½œæ•°åŠ 1çš„è¿ç®—ã€‚ éœ€è¦é‡‡ç”¨ä¸é—¨ã€æˆ–é—¨ã€å¼‚æˆ–é—¨ç­‰æ¨¡æ‹Ÿï¼Œ
+	 * ä¸å¯ä»¥ç›´æ¥è°ƒç”¨{@link #fullAdder(char, char, char) fullAdder}ã€
+	 * {@link #claAdder(String, String, char) claAdder}ã€
+	 * {@link #adder(String, String, char, int) adder}ã€
+	 * {@link #integerAddition(String, String, int) integerAddition}æ–¹æ³•ã€‚<br/>
+	 * ä¾‹ï¼šoneAdder("00001001")
 	 * 
 	 * @param operand
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ²Ù×÷Êı
-	 * @return operand¼Ó1µÄ½á¹û£¬³¤¶ÈÎªoperandµÄ³¤¶È¼Ó1£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÒç³ö£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ÆäÓàÎ»ÎªÏà¼Ó½á¹û
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„æ“ä½œæ•°
+	 * @return operandåŠ 1çš„ç»“æœï¼Œé•¿åº¦ä¸ºoperandçš„é•¿åº¦åŠ 1ï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æº¢å‡ºï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œå…¶ä½™ä½ä¸ºç›¸åŠ ç»“æœ
 	 */
 	public String oneAdder(String operand) {
 		StringBuilder sb = new StringBuilder(operand.length() + 1);
@@ -565,18 +565,18 @@ public class ALU {
 	}
 
 	/**
-	 * ¼Ó·¨Æ÷£¬ÒªÇóµ÷ÓÃ{@link #claAdder(String, String, char)}·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºadder("0100", "0011", ¡®0¡¯, 8)
+	 * åŠ æ³•å™¨ï¼Œè¦æ±‚è°ƒç”¨{@link #claAdder(String, String, char)}æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šadder("0100", "0011", â€˜0â€™, 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ±»¼ÓÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„è¢«åŠ æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ¼ÓÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„åŠ æ•°
 	 * @param c
-	 *            ×îµÍÎ»½øÎ»
+	 *            æœ€ä½ä½è¿›ä½
 	 * @param length
-	 *            ´æ·Å²Ù×÷ÊıµÄ¼Ä´æÆ÷µÄ³¤¶È£¬Îª4µÄ±¶Êı¡£length²»Ğ¡ÓÚ²Ù×÷ÊıµÄ³¤¶È£¬µ±Ä³¸ö²Ù×÷ÊıµÄ³¤¶ÈĞ¡ÓÚlengthÊ±£¬ĞèÒªÔÚ¸ßÎ»²¹·ûºÅÎ»
-	 * @return ³¤¶ÈÎªlength+1µÄ×Ö·û´®±íÊ¾µÄ¼ÆËã½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÒç³ö£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ºólengthÎ»ÊÇÏà¼Ó½á¹û
+	 *            å­˜æ”¾æ“ä½œæ•°çš„å¯„å­˜å™¨çš„é•¿åº¦ï¼Œä¸º4çš„å€æ•°ã€‚lengthä¸å°äºæ“ä½œæ•°çš„é•¿åº¦ï¼Œå½“æŸä¸ªæ“ä½œæ•°çš„é•¿åº¦å°äºlengthæ—¶ï¼Œéœ€è¦åœ¨é«˜ä½è¡¥ç¬¦å·ä½
+	 * @return é•¿åº¦ä¸ºlength+1çš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„è®¡ç®—ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æº¢å‡ºï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œålengthä½æ˜¯ç›¸åŠ ç»“æœ
 	 */
 	public String adder(String operand1, String operand2, char c, int length) {
 
@@ -599,7 +599,7 @@ public class ALU {
 	}
 
 	/**
-	 * ½«×Ö·û´®²¹×ã³¤¶È
+	 * å°†å­—ç¬¦ä¸²è¡¥è¶³é•¿åº¦
 	 * 
 	 * @param operand
 	 * @param length
@@ -616,16 +616,16 @@ public class ALU {
 	}
 
 	/**
-	 * ÕûÊı¼Ó·¨£¬ÒªÇóµ÷ÓÃ{@link #adder(String, String, char, int) adder}·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºintegerAddition("0100", "0011", 8)
+	 * æ•´æ•°åŠ æ³•ï¼Œè¦æ±‚è°ƒç”¨{@link #adder(String, String, char, int) adder}æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šintegerAddition("0100", "0011", 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ±»¼ÓÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„è¢«åŠ æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ¼ÓÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„åŠ æ•°
 	 * @param length
-	 *            ´æ·Å²Ù×÷ÊıµÄ¼Ä´æÆ÷µÄ³¤¶È£¬Îª4µÄ±¶Êı¡£length²»Ğ¡ÓÚ²Ù×÷ÊıµÄ³¤¶È£¬µ±Ä³¸ö²Ù×÷ÊıµÄ³¤¶ÈĞ¡ÓÚlengthÊ±£¬ĞèÒªÔÚ¸ßÎ»²¹·ûºÅÎ»
-	 * @return ³¤¶ÈÎªlength+1µÄ×Ö·û´®±íÊ¾µÄ¼ÆËã½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÒç³ö£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ºólengthÎ»ÊÇÏà¼Ó½á¹û
+	 *            å­˜æ”¾æ“ä½œæ•°çš„å¯„å­˜å™¨çš„é•¿åº¦ï¼Œä¸º4çš„å€æ•°ã€‚lengthä¸å°äºæ“ä½œæ•°çš„é•¿åº¦ï¼Œå½“æŸä¸ªæ“ä½œæ•°çš„é•¿åº¦å°äºlengthæ—¶ï¼Œéœ€è¦åœ¨é«˜ä½è¡¥ç¬¦å·ä½
+	 * @return é•¿åº¦ä¸ºlength+1çš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„è®¡ç®—ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æº¢å‡ºï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œålengthä½æ˜¯ç›¸åŠ ç»“æœ
 	 */
 
 	public String integerAddition(String operand1, String operand2, int length) {
@@ -634,16 +634,16 @@ public class ALU {
 	}
 
 	/**
-	 * ÕûÊı¼õ·¨£¬¿Éµ÷ÓÃ{@link #adder(String, String, char, int) adder}·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºintegerSubtraction("0100", "0011", 8)
+	 * æ•´æ•°å‡æ³•ï¼Œå¯è°ƒç”¨{@link #adder(String, String, char, int) adder}æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šintegerSubtraction("0100", "0011", 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ±»¼õÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„è¢«å‡æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ¼õÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„å‡æ•°
 	 * @param length
-	 *            ´æ·Å²Ù×÷ÊıµÄ¼Ä´æÆ÷µÄ³¤¶È£¬Îª4µÄ±¶Êı¡£length²»Ğ¡ÓÚ²Ù×÷ÊıµÄ³¤¶È£¬µ±Ä³¸ö²Ù×÷ÊıµÄ³¤¶ÈĞ¡ÓÚlengthÊ±£¬ĞèÒªÔÚ¸ßÎ»²¹·ûºÅÎ»
-	 * @return ³¤¶ÈÎªlength+1µÄ×Ö·û´®±íÊ¾µÄ¼ÆËã½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÒç³ö£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ºólengthÎ»ÊÇÏà¼õ½á¹û
+	 *            å­˜æ”¾æ“ä½œæ•°çš„å¯„å­˜å™¨çš„é•¿åº¦ï¼Œä¸º4çš„å€æ•°ã€‚lengthä¸å°äºæ“ä½œæ•°çš„é•¿åº¦ï¼Œå½“æŸä¸ªæ“ä½œæ•°çš„é•¿åº¦å°äºlengthæ—¶ï¼Œéœ€è¦åœ¨é«˜ä½è¡¥ç¬¦å·ä½
+	 * @return é•¿åº¦ä¸ºlength+1çš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„è®¡ç®—ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æº¢å‡ºï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œålengthä½æ˜¯ç›¸å‡ç»“æœ
 	 */
 
 	public String integerSubtraction(String operand1, String operand2, int length) {
@@ -660,17 +660,17 @@ public class ALU {
 	}
 
 	/**
-	 * ÕûÊı³Ë·¨£¬Ê¹ÓÃBoothËã·¨ÊµÏÖ£¬¿Éµ÷ÓÃ{@link #adder(String, String, char, int)
-	 * adder}µÈ·½·¨¡£<br/>
-	 * Àı£ºintegerMultiplication("0100", "0011", 8)
+	 * æ•´æ•°ä¹˜æ³•ï¼Œä½¿ç”¨Boothç®—æ³•å®ç°ï¼Œå¯è°ƒç”¨{@link #adder(String, String, char, int)
+	 * adder}ç­‰æ–¹æ³•ã€‚<br/>
+	 * ä¾‹ï¼šintegerMultiplication("0100", "0011", 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ±»³ËÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„è¢«ä¹˜æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ³ËÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„ä¹˜æ•°
 	 * @param length
-	 *            ´æ·Å²Ù×÷ÊıµÄ¼Ä´æÆ÷µÄ³¤¶È£¬Îª4µÄ±¶Êı¡£length²»Ğ¡ÓÚ²Ù×÷ÊıµÄ³¤¶È£¬µ±Ä³¸ö²Ù×÷ÊıµÄ³¤¶ÈĞ¡ÓÚlengthÊ±£¬ĞèÒªÔÚ¸ßÎ»²¹·ûºÅÎ»
-	 * @return ³¤¶ÈÎªlength+1µÄ×Ö·û´®±íÊ¾µÄÏà³Ë½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÒç³ö£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ºólengthÎ»ÊÇÏà³Ë½á¹û
+	 *            å­˜æ”¾æ“ä½œæ•°çš„å¯„å­˜å™¨çš„é•¿åº¦ï¼Œä¸º4çš„å€æ•°ã€‚lengthä¸å°äºæ“ä½œæ•°çš„é•¿åº¦ï¼Œå½“æŸä¸ªæ“ä½œæ•°çš„é•¿åº¦å°äºlengthæ—¶ï¼Œéœ€è¦åœ¨é«˜ä½è¡¥ç¬¦å·ä½
+	 * @return é•¿åº¦ä¸ºlength+1çš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„ç›¸ä¹˜ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æº¢å‡ºï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œålengthä½æ˜¯ç›¸ä¹˜ç»“æœ
 	 */ 
 	public String integerMultiplication(String operand1, String operand2, int length) {
 
@@ -678,13 +678,13 @@ public class ALU {
 		String operand22 = addLength(operand2, length);
 
 		String signBit = "0";
-		String product = operand22 + "0"; // »ı
+		String product = operand22 + "0"; // ç§¯
 		for (int i = 0; i < length; i++)
 			product = "0" + product;
 
 		for (int i = 0; i < length; i++) {
-			String part = product.substring(0, length); // ²¿·Ö»ı
-			// ±È½ÏP0ºÍP1µÄÖµ
+			String part = product.substring(0, length); // éƒ¨åˆ†ç§¯
+			// æ¯”è¾ƒP0å’ŒP1çš„å€¼
 
 			if (product.charAt(2 * length) - product.charAt(2 * length - 1) == 1) { // "01"
 				part = integerAddition(part, operand11, length).substring(1);
@@ -710,19 +710,19 @@ public class ALU {
 	}
 
 	/**
-	 * ÕûÊıµÄ²»»Ö¸´ÓàÊı³ı·¨£¬¿Éµ÷ÓÃ{@link #adder(String, String, char, int) adder}µÈ·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºintegerDivision("0100", "0011", 8)
+	 * æ•´æ•°çš„ä¸æ¢å¤ä½™æ•°é™¤æ³•ï¼Œå¯è°ƒç”¨{@link #adder(String, String, char, int) adder}ç­‰æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šintegerDivision("0100", "0011", 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ±»³ıÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„è¢«é™¤æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ²¹Âë±íÊ¾µÄ³ıÊı
+	 *            äºŒè¿›åˆ¶è¡¥ç è¡¨ç¤ºçš„é™¤æ•°
 	 * @param length
-	 *            ´æ·Å²Ù×÷ÊıµÄ¼Ä´æÆ÷µÄ³¤¶È£¬Îª4µÄ±¶Êı¡£length²»Ğ¡ÓÚ²Ù×÷ÊıµÄ³¤¶È£¬µ±Ä³¸ö²Ù×÷ÊıµÄ³¤¶ÈĞ¡ÓÚlengthÊ±£¬ĞèÒªÔÚ¸ßÎ»²¹·ûºÅÎ»
-	 * @return ³¤¶ÈÎª2*length+1µÄ×Ö·û´®±íÊ¾µÄÏà³ı½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÒç³ö£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ÆäºólengthÎ»ÎªÉÌ£¬×îºólengthÎ»ÎªÓàÊı
+	 *            å­˜æ”¾æ“ä½œæ•°çš„å¯„å­˜å™¨çš„é•¿åº¦ï¼Œä¸º4çš„å€æ•°ã€‚lengthä¸å°äºæ“ä½œæ•°çš„é•¿åº¦ï¼Œå½“æŸä¸ªæ“ä½œæ•°çš„é•¿åº¦å°äºlengthæ—¶ï¼Œéœ€è¦åœ¨é«˜ä½è¡¥ç¬¦å·ä½
+	 * @return é•¿åº¦ä¸º2*length+1çš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„ç›¸é™¤ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æº¢å‡ºï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œå…¶ålengthä½ä¸ºå•†ï¼Œæœ€ålengthä½ä¸ºä½™æ•°
 	 */
 	public String integerDivision(String operand1, String operand2, int length) {
-		// ³ıÊıÎª0µÄÇé¿ö
+		// é™¤æ•°ä¸º0çš„æƒ…å†µ
 		if (Integer.parseInt(integerTrueValue(operand2)) == 0) {
 			return "NaN";
 		} else if (Integer.parseInt(integerTrueValue(operand1)) == 0
@@ -743,17 +743,17 @@ public class ALU {
 			operand2 = operand2.substring(operand2.length() - lb, operand2.length());
 		}
 
-		// ±»³ıÊı·ûºÅÀ©Õ¹
+		// è¢«é™¤æ•°ç¬¦å·æ‰©å±•
 		String str1 = operand1;
 		for (int i = 0; i < length * 2 - operand1.length(); i++) {
 			str1 = operand1.charAt(0) + str1;
 		}
 
-		// Òç³öÎ»
+		// æº¢å‡ºä½
 		char overBit = '0';
 
 		for (int i = 0; i < length; i++) {
-			// Èç¹ûÓàÊı¼Ä´æÆ÷ÖĞµÄÊıÓë³ıÊı·ûºÅÏàÍ¬£¬×ö¼õ·¨
+			// å¦‚æœä½™æ•°å¯„å­˜å™¨ä¸­çš„æ•°ä¸é™¤æ•°ç¬¦å·ç›¸åŒï¼Œåšå‡æ³•
 			if (str1.charAt(0) == operand2.charAt(0)) {
 				str1 = integerSubtraction(str1.substring(0, length), operand2, length).substring(1)
 						+ str1.substring(length);
@@ -779,7 +779,7 @@ public class ALU {
 		String eString = str1.substring(length);
 		String reminder = str1.substring(0, length);
 
-		// ÈôÓàÊıºÍ±»³ıÊı·ûºÅ²»Í¬£¬µ±ÓàÊıÓë³ıÊı·ûºÅÏàÍ¬£¬¼õ·¨£¬·ñÔò¼Ó·¨
+		// è‹¥ä½™æ•°å’Œè¢«é™¤æ•°ç¬¦å·ä¸åŒï¼Œå½“ä½™æ•°ä¸é™¤æ•°ç¬¦å·ç›¸åŒï¼Œå‡æ³•ï¼Œå¦åˆ™åŠ æ³•
 		if (reminder.charAt(0) == operand2.charAt(0)) {
 			if (reminder.charAt(0) != operand1.charAt(0)) {
 				reminder = integerSubtraction(reminder, operand2, length).substring(1);
@@ -791,30 +791,30 @@ public class ALU {
 			eString = eString.substring(1, eString.length()) + "0";
 		}
 
-		// ÉÌµÄĞŞÕı£¬Èç¹û±»³ıÊıºÍ³ıÊı·ûºÅÏà·´£¬ÉÌ¼Ó1
+		// å•†çš„ä¿®æ­£ï¼Œå¦‚æœè¢«é™¤æ•°å’Œé™¤æ•°ç¬¦å·ç›¸åï¼Œå•†åŠ 1
 		if (operand1.charAt(0) != operand2.charAt(0)) {
 			eString = oneAdder(eString).substring(1);
 		}
 
-		// Òç³öÎ»+ÉÌ+ÓàÊı
+		// æº¢å‡ºä½+å•†+ä½™æ•°
 		return overBit + eString + reminder;
 
 	}
 
 	/**
-	 * ´ø·ûºÅÕûÊı¼Ó·¨£¬¿ÉÒÔµ÷ÓÃ{@link #adder(String, String, char, int) adder}µÈ·½·¨£¬
-	 * µ«²»ÄÜÖ±½Ó½«²Ù×÷Êı×ª»»Îª²¹ÂëºóÊ¹ÓÃ{@link #integerAddition(String, String, int)
-	 * integerAddition}¡¢ {@link #integerSubtraction(String, String, int)
-	 * integerSubtraction}À´ÊµÏÖ¡£<br/>
-	 * Àı£ºsignedAddition("1100", "1011", 8)
+	 * å¸¦ç¬¦å·æ•´æ•°åŠ æ³•ï¼Œå¯ä»¥è°ƒç”¨{@link #adder(String, String, char, int) adder}ç­‰æ–¹æ³•ï¼Œ
+	 * ä½†ä¸èƒ½ç›´æ¥å°†æ“ä½œæ•°è½¬æ¢ä¸ºè¡¥ç åä½¿ç”¨{@link #integerAddition(String, String, int)
+	 * integerAddition}ã€ {@link #integerSubtraction(String, String, int)
+	 * integerSubtraction}æ¥å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šsignedAddition("1100", "1011", 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆÔ­Âë±íÊ¾µÄ±»¼ÓÊı£¬ÆäÖĞµÚ1Î»Îª·ûºÅÎ»
+	 *            äºŒè¿›åˆ¶åŸç è¡¨ç¤ºçš„è¢«åŠ æ•°ï¼Œå…¶ä¸­ç¬¬1ä½ä¸ºç¬¦å·ä½
 	 * @param operand2
-	 *            ¶ş½øÖÆÔ­Âë±íÊ¾µÄ¼ÓÊı£¬ÆäÖĞµÚ1Î»Îª·ûºÅÎ»
+	 *            äºŒè¿›åˆ¶åŸç è¡¨ç¤ºçš„åŠ æ•°ï¼Œå…¶ä¸­ç¬¬1ä½ä¸ºç¬¦å·ä½
 	 * @param length
-	 *            ´æ·Å²Ù×÷ÊıµÄ¼Ä´æÆ÷µÄ³¤¶È£¬Îª4µÄ±¶Êı¡£length²»Ğ¡ÓÚ²Ù×÷ÊıµÄ³¤¶È£¨²»°üº¬·ûºÅ£©£¬µ±Ä³¸ö²Ù×÷ÊıµÄ³¤¶ÈĞ¡ÓÚlengthÊ±£¬ĞèÒª½«Æä³¤¶ÈÀ©Õ¹µ½length
-	 * @return ³¤¶ÈÎªlength+2µÄ×Ö·û´®±íÊ¾µÄ¼ÆËã½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÒç³ö£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬µÚ2Î»Îª·ûºÅÎ»£¬ºólengthÎ»ÊÇÏà¼Ó½á¹û
+	 *            å­˜æ”¾æ“ä½œæ•°çš„å¯„å­˜å™¨çš„é•¿åº¦ï¼Œä¸º4çš„å€æ•°ã€‚lengthä¸å°äºæ“ä½œæ•°çš„é•¿åº¦ï¼ˆä¸åŒ…å«ç¬¦å·ï¼‰ï¼Œå½“æŸä¸ªæ“ä½œæ•°çš„é•¿åº¦å°äºlengthæ—¶ï¼Œéœ€è¦å°†å…¶é•¿åº¦æ‰©å±•åˆ°length
+	 * @return é•¿åº¦ä¸ºlength+2çš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„è®¡ç®—ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æº¢å‡ºï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œç¬¬2ä½ä¸ºç¬¦å·ä½ï¼Œålengthä½æ˜¯ç›¸åŠ ç»“æœ
 	 */
 	public String signedAddition(String operand1, String operand2, int length) {
 		String sign1 = operand1.substring(0, 1);
@@ -846,29 +846,29 @@ public class ALU {
 	}
 
 	/**
-	 * ¸¡µãÊı¼Ó·¨£¬¿Éµ÷ÓÃ{@link #signedAddition(String, String, int)
-	 * signedAddition}µÈ·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºfloatAddition("00111111010100000", "00111111001000000", 8, 8, 8)
+	 * æµ®ç‚¹æ•°åŠ æ³•ï¼Œå¯è°ƒç”¨{@link #signedAddition(String, String, int)
+	 * signedAddition}ç­‰æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šfloatAddition("00111111010100000", "00111111001000000", 8, 8, 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ±íÊ¾µÄ±»¼ÓÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„è¢«åŠ æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ±íÊ¾µÄ¼ÓÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„åŠ æ•°
 	 * @param eLength
-	 *            Ö¸ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            æŒ‡æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param sLength
-	 *            Î²ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            å°¾æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param gLength
-	 *            ±£»¤Î»µÄ³¤¶È
-	 * @return ³¤¶ÈÎª2+eLength+sLengthµÄ×Ö·û´®±íÊ¾µÄÏà¼Ó½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÖ¸ÊıÉÏÒç£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬
-	 *         ÆäÓàÎ»´Ó×óµ½ÓÒÒÀ´ÎÎª·ûºÅ¡¢Ö¸Êı£¨ÒÆÂë±íÊ¾£©¡¢Î²Êı£¨Ê×Î»Òş²Ø£©¡£ÉáÈë²ßÂÔÎªÏò0ÉáÈë
+	 *            ä¿æŠ¤ä½çš„é•¿åº¦
+	 * @return é•¿åº¦ä¸º2+eLength+sLengthçš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„ç›¸åŠ ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æŒ‡æ•°ä¸Šæº¢ï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œ
+	 *         å…¶ä½™ä½ä»å·¦åˆ°å³ä¾æ¬¡ä¸ºç¬¦å·ã€æŒ‡æ•°ï¼ˆç§»ç è¡¨ç¤ºï¼‰ã€å°¾æ•°ï¼ˆé¦–ä½éšè—ï¼‰ã€‚èˆå…¥ç­–ç•¥ä¸ºå‘0èˆå…¥
 	 */
 
 	public String floatAddition(String operand1, String operand2, int eLength, int sLength, int gLength) {
 
-		if (operand1.equals("NaN") || operand2.equals("NaN")) { // ·ÇÊı
+		if (operand1.equals("NaN") || operand2.equals("NaN")) { // éæ•°
 			return "NaN";
-		} else if ((floatTrueValue(operand1, eLength, sLength).contains("Inf")) // Õı¸ºÎŞÇî
+		} else if ((floatTrueValue(operand1, eLength, sLength).contains("Inf")) // æ­£è´Ÿæ— ç©·
 				|| (floatTrueValue(operand2, eLength, sLength).contains("Inf"))) {
 			return "Inf";
 		} else if (floatTrueValue(operand1, eLength, sLength).equals("0.0")
@@ -883,10 +883,10 @@ public class ALU {
 		} else {
 
 			String res = "";
-			String firstBit = "0";// µÚÒ»Î»
-			String signBit = "0";// ·ûºÅÎ»
-			String eString = "";// ½×Âë
-			String sString = "";// Î²Êı
+			String firstBit = "0";// ç¬¬ä¸€ä½
+			String signBit = "0";// ç¬¦å·ä½
+			String eString = "";// é˜¶ç 
+			String sString = "";// å°¾æ•°
 
 			String sString1 = operand1.substring(eLength + 1, operand1.length());
 			String sString2 = operand2.substring(eLength + 1, operand2.length());
@@ -894,9 +894,9 @@ public class ALU {
 			int eValue1 = Integer.parseInt(integerTrueValue("0" + operand1.substring(1, eLength + 1)));
 			int eValue2 = Integer.parseInt(integerTrueValue("0" + operand2.substring(1, eLength + 1)));
 			eString = operand1.substring(1, eLength + 1);
-			int eValue = 0;// ½×ÂëµÄÕæÖµ
+			int eValue = 0;// é˜¶ç çš„çœŸå€¼
 
-			// ¶Ô½×
+			// å¯¹é˜¶
 			if (eValue1 < eValue2) {
 
 				eValue = eValue2;
@@ -912,14 +912,14 @@ public class ALU {
 			} else {
 				eValue = eValue1;
 				eString = operand1.substring(1, eLength + 1);
-				sString1 = "1" + sString1;// Î²ÊıÒş²ØµÄÒ»Î»1
+				sString1 = "1" + sString1;// å°¾æ•°éšè—çš„ä¸€ä½1
 				sString2 = "1" + sString2;
 			}
 
 			sString = signedAddition(operand1.substring(0, 1) + sString1, operand2.substring(0, 1) + sString2,
 					sLength + 1);
 
-			// ·ûºÅÎ»
+			// ç¬¦å·ä½
 			double a = Double.parseDouble(floatTrueValue(operand1, eLength, sLength));
 			double b = Double.parseDouble(floatTrueValue(operand2, eLength, sLength));
 			if (Math.abs(a) >= Math.abs(b)) {
@@ -928,18 +928,18 @@ public class ALU {
 				signBit = operand2.substring(0, 1);
 			}
 
-			if (sString.charAt(0) == '1') { // ÅĞ¶ÏÎ²ÊıÊÇ·ñÓĞ½øÎ»
+			if (sString.charAt(0) == '1') { // åˆ¤æ–­å°¾æ•°æ˜¯å¦æœ‰è¿›ä½
 				eString = oneAdder(eString);
-				if (eString.charAt(0) == '1') {// ÅĞ¶ÏÊÇ·ñÒç³ö
+				if (eString.charAt(0) == '1') {// åˆ¤æ–­æ˜¯å¦æº¢å‡º
 					firstBit = "1";
 				}
 				eString = eString.substring(1, eString.length());
 				sString = sString.substring(0, 1) + sString.substring(2, sString.length() - 1);
 			} else {
-				sString = sString.substring(2, sString.length() - 1);// Î²Êı
+				sString = sString.substring(2, sString.length() - 1);// å°¾æ•°
 			}
 
-			// ¹æ¸ñ»¯²Ù×÷(×ó¹æ)
+			// è§„æ ¼åŒ–æ“ä½œ(å·¦è§„)
 			if (sString.substring(0, 1).equals("0")) {
 				int i = 0;
 				while (i < sString.length()) {
@@ -972,21 +972,21 @@ public class ALU {
 	}
 
 	/**
-	 * ¸¡µãÊı¼õ·¨£¬¿Éµ÷ÓÃ{@link #floatAddition(String, String, int, int, int)
-	 * floatAddition}·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºfloatSubtraction("00111111010100000", "00111111001000000", 8, 8, 8)
+	 * æµ®ç‚¹æ•°å‡æ³•ï¼Œå¯è°ƒç”¨{@link #floatAddition(String, String, int, int, int)
+	 * floatAddition}æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šfloatSubtraction("00111111010100000", "00111111001000000", 8, 8, 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ±íÊ¾µÄ±»¼õÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„è¢«å‡æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ±íÊ¾µÄ¼õÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„å‡æ•°
 	 * @param eLength
-	 *            Ö¸ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            æŒ‡æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param sLength
-	 *            Î²ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            å°¾æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param gLength
-	 *            ±£»¤Î»µÄ³¤¶È
-	 * @return ³¤¶ÈÎª2+eLength+sLengthµÄ×Ö·û´®±íÊ¾µÄÏà¼õ½á¹û£¬ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÖ¸ÊıÉÏÒç£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ÆäÓàÎ»´Ó×óµ½ÓÒÒÀ´ÎÎª·ûºÅ¡¢Ö¸Êı£¨ÒÆÂë±íÊ¾£©¡¢Î²Êı£¨Ê×Î»Òş²Ø£©¡£ÉáÈë²ßÂÔÎªÏò0ÉáÈë
+	 *            ä¿æŠ¤ä½çš„é•¿åº¦
+	 * @return é•¿åº¦ä¸º2+eLength+sLengthçš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„ç›¸å‡ç»“æœï¼Œå…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æŒ‡æ•°ä¸Šæº¢ï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œå…¶ä½™ä½ä»å·¦åˆ°å³ä¾æ¬¡ä¸ºç¬¦å·ã€æŒ‡æ•°ï¼ˆç§»ç è¡¨ç¤ºï¼‰ã€å°¾æ•°ï¼ˆé¦–ä½éšè—ï¼‰ã€‚èˆå…¥ç­–ç•¥ä¸ºå‘0èˆå…¥
 	 */
 	public String floatSubtraction(String operand1, String operand2, int eLength, int sLength, int gLength) {
 
@@ -1000,23 +1000,23 @@ public class ALU {
 	}
 
 	/**
-	 * ¸¡µãÊı³Ë·¨£¬¿Éµ÷ÓÃ{@link #integerMultiplication(String, String, int)
-	 * integerMultiplication}µÈ·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºfloatMultiplication("00111110111000000", "00111111000000000", 8, 8)
+	 * æµ®ç‚¹æ•°ä¹˜æ³•ï¼Œå¯è°ƒç”¨{@link #integerMultiplication(String, String, int)
+	 * integerMultiplication}ç­‰æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šfloatMultiplication("00111110111000000", "00111111000000000", 8, 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ±íÊ¾µÄ±»³ËÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„è¢«ä¹˜æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ±íÊ¾µÄ³ËÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„ä¹˜æ•°
 	 * @param eLength
-	 *            Ö¸ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            æŒ‡æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param sLength
-	 *            Î²ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
-	 * @return ³¤¶ÈÎª2+eLength+sLengthµÄ×Ö·û´®±íÊ¾µÄÏà³Ë½á¹û,ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÖ¸ÊıÉÏÒç£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ÆäÓàÎ»´Ó×óµ½ÓÒÒÀ´ÎÎª·ûºÅ¡¢Ö¸Êı£¨ÒÆÂë±íÊ¾£©¡¢Î²Êı£¨Ê×Î»Òş²Ø£©¡£ÉáÈë²ßÂÔÎªÏò0ÉáÈë
+	 *            å°¾æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
+	 * @return é•¿åº¦ä¸º2+eLength+sLengthçš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„ç›¸ä¹˜ç»“æœ,å…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æŒ‡æ•°ä¸Šæº¢ï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œå…¶ä½™ä½ä»å·¦åˆ°å³ä¾æ¬¡ä¸ºç¬¦å·ã€æŒ‡æ•°ï¼ˆç§»ç è¡¨ç¤ºï¼‰ã€å°¾æ•°ï¼ˆé¦–ä½éšè—ï¼‰ã€‚èˆå…¥ç­–ç•¥ä¸ºå‘0èˆå…¥
 	 */
 	public String floatMultiplication(String operand1, String operand2, int eLength, int sLength) {
 
-		if (!operand1.contains("1") || !operand2.contains("1")) { // ³ËÊıÓĞÕı0
+		if (!operand1.contains("1") || !operand2.contains("1")) { // ä¹˜æ•°æœ‰æ­£0
 			StringBuffer sb = new StringBuffer();
 			for (int i = 0; i < 2 + sLength + eLength; i++) {
 				sb.insert(0, 0);
@@ -1024,12 +1024,12 @@ public class ALU {
 			return sb.toString();
 		}
 
-		// Ğ¡Êı²¿·Ö²¼Ë¹³Ë·¨
+		// å°æ•°éƒ¨åˆ†å¸ƒæ–¯ä¹˜æ³•
 		String ssString;
 		String xString;
 		String yString;
 
-		// Òş²ØÎ»
+		// éšè—ä½
 		if (operand1.substring(1, 1 + eLength).contains("1")) {
 			xString = "1" + operand1.substring(1 + eLength);
 		} else {
@@ -1049,11 +1049,11 @@ public class ALU {
 		xString = logRightShift(xString, gLength - 1 - sLength);
 		yString = logRightShift(yString, gLength - 1 - sLength);
 
-		// Î²ÊıÏà³Ë
+		// å°¾æ•°ç›¸ä¹˜
 		ssString = integerMultiplication(xString, yString, gLength * 2);
 		ssString = ssString.substring(ssString.length() - 2 * xString.length());
 
-		// ½×Âë²¿·Ö
+		// é˜¶ç éƒ¨åˆ†
 		String eString = "0";
 		int index = 0;
 		int z = new BigInteger(operand1.substring(1, 1 + eLength), 2).intValue();
@@ -1064,13 +1064,13 @@ public class ALU {
 				eString = eString + "0";
 			}
 		} else {
-			// ½×ÂëÏà¼Ó
+			// é˜¶ç ç›¸åŠ 
 			eString = integerSubtraction(operand1.substring(1, 1 + eLength),
 					"0" + Integer.toBinaryString((int) Math.pow(2, eLength - 1) - 1), eLength).substring(1);
 			eString = integerAddition(eString, operand2.substring(1, 1 + eLength), eLength);
 			index = ssString.indexOf("1");
 		}
-		// ÅÅ³ı½×ÂëÒç³öµÄÇé¿ö
+		// æ’é™¤é˜¶ç æº¢å‡ºçš„æƒ…å†µ
 		if (index >= 0) {
 			ssString = ssString.substring(index + 1, index + 1 + sLength);
 			if (operand1.charAt(0) == operand2.charAt(0)) {
@@ -1097,19 +1097,19 @@ public class ALU {
 	}
 
 	/**
-	 * ¸¡µãÊı³ı·¨£¬¿Éµ÷ÓÃ{@link #integerDivision(String, String, int)
-	 * integerDivision}µÈ·½·¨ÊµÏÖ¡£<br/>
-	 * Àı£ºfloatDivision("00111110111000000", "00111111000000000", 8, 8)
+	 * æµ®ç‚¹æ•°é™¤æ³•ï¼Œå¯è°ƒç”¨{@link #integerDivision(String, String, int)
+	 * integerDivision}ç­‰æ–¹æ³•å®ç°ã€‚<br/>
+	 * ä¾‹ï¼šfloatDivision("00111110111000000", "00111111000000000", 8, 8)
 	 * 
 	 * @param operand1
-	 *            ¶ş½øÖÆ±íÊ¾µÄ±»³ıÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„è¢«é™¤æ•°
 	 * @param operand2
-	 *            ¶ş½øÖÆ±íÊ¾µÄ³ıÊı
+	 *            äºŒè¿›åˆ¶è¡¨ç¤ºçš„é™¤æ•°
 	 * @param eLength
-	 *            Ö¸ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
+	 *            æŒ‡æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
 	 * @param sLength
-	 *            Î²ÊıµÄ³¤¶È£¬È¡Öµ´óÓÚµÈÓÚ 4
-	 * @return ³¤¶ÈÎª2+eLength+sLengthµÄ×Ö·û´®±íÊ¾µÄÏà³Ë½á¹û,ÆäÖĞµÚ1Î»Ö¸Ê¾ÊÇ·ñÖ¸ÊıÉÏÒç£¨Òç³öÎª1£¬·ñÔòÎª0£©£¬ÆäÓàÎ»´Ó×óµ½ÓÒÒÀ´ÎÎª·ûºÅ¡¢Ö¸Êı£¨ÒÆÂë±íÊ¾£©¡¢Î²Êı£¨Ê×Î»Òş²Ø£©¡£ÉáÈë²ßÂÔÎªÏò0ÉáÈë
+	 *            å°¾æ•°çš„é•¿åº¦ï¼Œå–å€¼å¤§äºç­‰äº 4
+	 * @return é•¿åº¦ä¸º2+eLength+sLengthçš„å­—ç¬¦ä¸²è¡¨ç¤ºçš„ç›¸ä¹˜ç»“æœ,å…¶ä¸­ç¬¬1ä½æŒ‡ç¤ºæ˜¯å¦æŒ‡æ•°ä¸Šæº¢ï¼ˆæº¢å‡ºä¸º1ï¼Œå¦åˆ™ä¸º0ï¼‰ï¼Œå…¶ä½™ä½ä»å·¦åˆ°å³ä¾æ¬¡ä¸ºç¬¦å·ã€æŒ‡æ•°ï¼ˆç§»ç è¡¨ç¤ºï¼‰ã€å°¾æ•°ï¼ˆé¦–ä½éšè—ï¼‰ã€‚èˆå…¥ç­–ç•¥ä¸ºå‘0èˆå…¥
 	 */
 	public String floatDivision(String operand1, String operand2, int eLength, int sLength) {
 
@@ -1119,7 +1119,7 @@ public class ALU {
 		if (expo1 == 0) {
 			return addLength("0", 2 + eLength + sLength);
 		}
-		// Òş²ØÎ»
+		// éšè—ä½
 		char hideBit1 = '1';
 		char hideBit2 = '1';
 
@@ -1138,7 +1138,7 @@ public class ALU {
 			signBit = '1';
 		}
 
-		// Èç¹û±»³ıÊıÎªÕı¸º0£¬ÄÇÃ´´ğ°¸¼´Îª0
+		// å¦‚æœè¢«é™¤æ•°ä¸ºæ­£è´Ÿ0ï¼Œé‚£ä¹ˆç­”æ¡ˆå³ä¸º0
 		if (floatTrueValue(operand1, eLength, sLength) == "0.0"
 				|| floatTrueValue(operand1, eLength, sLength) == "-0.0") {
 
@@ -1148,7 +1148,7 @@ public class ALU {
 			}
 			return "0" + signBit + result;
 
-		} else if (floatTrueValue(operand2, eLength, sLength) == "0.0" // ³ıÊıÎª0
+		} else if (floatTrueValue(operand2, eLength, sLength) == "0.0" // é™¤æ•°ä¸º0
 				|| floatTrueValue(operand2, eLength, sLength) == "-0.0") {
 
 			String eString = "";
@@ -1163,10 +1163,10 @@ public class ALU {
 			return "0" + signBit + eString + sString;
 		}
 
-		// Ö¸ÊıÏà¼õ£¬¼ÓÉÏÆ«Öµ
+		// æŒ‡æ•°ç›¸å‡ï¼ŒåŠ ä¸Šåå€¼
 		int eValue = expo1 - expo2 + bias;
 
-		// Èç¹ûÖ¸ÊıÉÏÒç£¬·µ»ØÎŞÇî
+		// å¦‚æœæŒ‡æ•°ä¸Šæº¢ï¼Œè¿”å›æ— ç©·
 		if (eValue > Math.pow(2, eLength) - 1) {
 			String expo = "";
 			String sign = "";
@@ -1179,7 +1179,7 @@ public class ALU {
 
 			return "1" + signBit + expo + sign;
 
-		} else if (eValue < 0) { // Ö¸ÊıÏÂÒç·µ»Ø0
+		} else if (eValue < 0) { // æŒ‡æ•°ä¸‹æº¢è¿”å›0
 
 			String symAndSign = "";
 			for (int i = 0; i < eLength + sLength; i++) {
@@ -1192,7 +1192,7 @@ public class ALU {
 		String sString = sign1;
 		int length = ((1 + sLength) / 4 + 1) * 4 - 1;
 
-		// Á½ÊıÏà³ı
+		// ä¸¤æ•°ç›¸é™¤
 		for (int i = 0; i < length - sign1.length(); i++) {
 			sString = "0" + sString;
 		}
@@ -1205,7 +1205,7 @@ public class ALU {
 			String reminder = sString.substring(0, length);
 			char c = '0';
 
-			// Èç¹û¹»¼õ£¬¾Í¼õ
+			// å¦‚æœå¤Ÿå‡ï¼Œå°±å‡
 			String temp = integerSubtraction("0" + reminder, "0" + sign2, length + 1).substring(2);
 			if (Integer.parseInt(integerTrueValue(temp)) >= 0) {
 				reminder = temp;
